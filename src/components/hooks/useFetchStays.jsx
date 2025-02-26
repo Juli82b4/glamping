@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { useAuthContext } from "../../context/useAuthContext";
+import Swal from "sweetalert2";
 
 const useFetchStays = () => {
   const [stays, setStays] = useState([]);
@@ -74,6 +75,21 @@ const useFetchStays = () => {
 
   // Delete stay
   const deleteStay = async (params) => {
+    const result = await Swal.fire({
+      title: "Er du sikker?",
+      text: "Du kan ikke fortryde denne handling",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#d33",
+      cancelButtonColor: "#3085d6",
+      confirmButtonText: "Ja, slet",
+      cancelButtonText: "Annuller",
+    });
+
+    if (!result.isConfirmed) {
+      return;
+    }
+
     await fetch(`http://localhost:3042/stay/${params}`, {
       method: "DELETE",
       headers: {
