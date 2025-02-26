@@ -6,6 +6,13 @@ const BackofficeNavigation = () => {
     <ul className={styles.backofficeNavigation}>
       <li>
         <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? styles.active : "")}
+        >
+          Home
+        </NavLink>
+        
+        <NavLink
           to="/activities"
           className={({ isActive }) => (isActive ? styles.active : "")}
         >

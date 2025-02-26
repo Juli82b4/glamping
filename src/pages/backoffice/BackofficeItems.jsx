@@ -2,6 +2,7 @@
 import { Outlet, useNavigate } from "react-router-dom";
 import Button from "../../components/button/Button";
 import { useFetch } from "../../components/hooks/useFetch";
+import { useFetchReviews } from "../../components/hooks/useFetchReviews";
 const BackofficeActivities = () => {
   const { activities, deleteActivity, refetch } = useFetch();
   const navigate = useNavigate();
@@ -71,7 +72,38 @@ const BackofficeActivities = () => {
 
 // REVIEWS
 const BackofficeReviews = () => {
-  return <div>Reviews</div>;
+  const { reviews } = useFetchReviews();
+
+  return (
+    <article>
+      <table>
+        <thead>
+          <tr>
+            <th>Aktivitet</th>
+            <th>Navn</th>
+            <th>Alder</th>
+            <th>Review</th>
+            <th>Tid</th>
+            <th>Billede</th>
+          </tr>
+        </thead>
+        <tbody>
+          {reviews?.map((review) => (
+            <tr key={review._id} className="backofficeItem">
+              <td>{review.stay}</td>
+              <td>{review.name}</td>
+              <td>{review.age}</td>
+              <td>{review.review}</td>
+              <td>{review.created}</td>
+              <td>
+                <img src={review.image}></img>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </article>
+  );
 };
 
 export { BackofficeActivities, BackofficeReviews };
