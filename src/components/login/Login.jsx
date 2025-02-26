@@ -4,8 +4,8 @@ import styles from "./login.module.css";
 
 const Login = () => {
   const { error, signIn } = useAuthContext();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("admin@mediacollege.dk");
+  const [password, setPassword] = useState("admin");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -24,21 +24,21 @@ const Login = () => {
         <div className={styles.formGroup}>
           <input
             className={styles.input}
-            type='email'
-            placeholder='Email'
-            defaultValue='admin@mediacollege.dk'
+            type="email"
+            placeholder="Email"
+            defaultValue="admin@mediacollege.dk"
             onChange={(e) => setEmail(e.target.value)}
             required
           />
           <input
             className={styles.input}
-            type='password'
-            placeholder='Password'
-            defaultValue='admin'
+            type="password"
+            placeholder="Password"
+            defaultValue="admin"
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button className={styles.button} type='submit'>
+        <button className={styles.button} type="submit">
           Log ind
         </button>
       </form>
