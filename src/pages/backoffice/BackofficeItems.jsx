@@ -3,6 +3,7 @@ import { Outlet, useNavigate } from "react-router-dom";
 import Button from "../../components/button/Button";
 import { useFetch } from "../../components/hooks/useFetch";
 import { useFetchReviews } from "../../components/hooks/useFetchReviews";
+import { useFetchStays } from "../../components/hooks/useFetchStays";
 const BackofficeActivities = () => {
   const { activities, deleteActivity, refetch } = useFetch();
   const navigate = useNavigate();
@@ -69,6 +70,54 @@ const BackofficeActivities = () => {
 };
 
 // STAYS
+const BackofficeStays = () => {
+  const { stays, deleteStay } = useFetchStays();
+  console.log(stays);
+
+  return (
+    <article>
+      <table>
+        <thead>
+          <tr>
+            <th>Titel</th>
+            <th>Beskrivelse</th>
+            <th>Person Antal</th>
+            <th>Pris</th>
+            <th>Indeholder</th>
+            <th>Billede</th>
+            <th>---</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {stays?.map((stay) => (
+            <tr key={stay._id} className="backofficeItem">
+              <td>{stay.title}</td>
+              <td>{stay.description}</td>
+              <td>{stay.numberOfPersons}</td>
+              <td>{stay.price}</td>
+              <td>
+                {stay.includes?.map((item, index) => (
+                  <p key={index}>{item}</p>
+                ))}
+              </td>
+              <td>
+                <img src={stay.image} alt={stay.title} />
+              </td>
+              <td>
+                <Button
+                  buttonText="Slet"
+                  background="red"
+                  onClick={() => deleteStay(stay._id)}
+                />
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </article>
+  );
+};
 
 // REVIEWS
 const BackofficeReviews = () => {
@@ -115,4 +164,4 @@ const BackofficeReviews = () => {
   );
 };
 
-export { BackofficeActivities, BackofficeReviews };
+export { BackofficeActivities, BackofficeReviews, BackofficeStays };

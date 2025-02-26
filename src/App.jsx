@@ -4,7 +4,7 @@ import { useRoutes } from "react-router-dom";
 import Login from "./components/login/Login";
 import Footer from "./components/footer/Footer";
 import { useAuthContext } from "./context/useAuthContext";
-import { BackofficeActivities, BackofficeReviews } from "./pages/backoffice/BackofficeItems";
+import { BackofficeActivities, BackofficeReviews, BackofficeStays } from "./pages/backoffice/BackofficeItems";
 import ActivityForm from "./pages/backoffice/forms/ActivityForm";
 
 function App() {
@@ -22,6 +22,10 @@ function App() {
         {
           path: "reviews",
           element: <BackofficeReviews />,
+        },
+        {
+          path: "stays",
+          element: <BackofficeStays />,
         },
         {
           path: "activities",

@@ -18,6 +18,13 @@ const BackofficeNavigation = () => {
         >
           Aktiviteter
         </NavLink>
+        
+        <NavLink
+          to="/stays"
+          className={({ isActive }) => (isActive ? styles.active : "")}
+        >
+          Ophold
+        </NavLink>
 
         <NavLink
           to="/reviews"
