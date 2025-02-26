@@ -30,7 +30,7 @@ const BackofficeActivities = () => {
         </thead>
         <tbody>
           {activities?.map((activity) => (
-            <tr key={activity._id} className='backofficeItem'>
+            <tr key={activity._id} className="backofficeItem">
               <td>{activity.title}</td>
               <td>{`${activity.description.slice(0, 10)}...`}</td>
               <td>{activity.date}</td>
@@ -38,14 +38,14 @@ const BackofficeActivities = () => {
               <td>
                 <img src={activity.image}></img>
               </td>
-              <td className='buttons'>
+              <td className="buttons">
                 <Button
-                  buttonText='Slet'
-                  background='red'
+                  buttonText="Slet"
+                  background="red"
                   onClick={() => deleteActivity(activity._id)}
                 />
                 <Button
-                  buttonText='Redigér'
+                  buttonText="Redigér"
                   onClick={() => handleEdit(activity._id)}
                 />
               </td>
@@ -54,8 +54,8 @@ const BackofficeActivities = () => {
           <tr>
             <td>
               <Button
-                buttonText='Tilføj aktivitet'
-                background='green'
+                buttonText="Tilføj aktivitet"
+                background="green"
                 onClick={() => handleAddActivity()}
               />
             </td>
@@ -70,5 +70,8 @@ const BackofficeActivities = () => {
 // STAYS
 
 // REVIEWS
+const BackofficeReviews = () => {
+  return <div>Reviews</div>;
+};
 
-export { BackofficeActivities };
+export { BackofficeActivities, BackofficeReviews };
