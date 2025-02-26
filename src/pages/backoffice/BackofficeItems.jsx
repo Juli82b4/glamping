@@ -4,6 +4,7 @@ import Button from "../../components/button/Button";
 import { useFetch } from "../../components/hooks/useFetch";
 import { useFetchReviews } from "../../components/hooks/useFetchReviews";
 import { useFetchStays } from "../../components/hooks/useFetchStays";
+
 const BackofficeActivities = () => {
   const { activities, deleteActivity, refetch } = useFetch();
   const navigate = useNavigate();

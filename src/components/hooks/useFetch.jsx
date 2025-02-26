@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { useAuthContext } from "../../context/useAuthContext";
+import Swal from "sweetalert2";
 
 const useFetch = () => {
   const [activities, setActivities] = useState([]);
@@ -74,6 +75,20 @@ const useFetch = () => {
 
   // SLET AKTIVITET
   const deleteActivity = async (params) => {
+    const { isConfirmed } = await Swal.fire({
+      title: "Er du sikker?",
+      text: "Du kan ikke fortryde denne handling",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Ja, slet aktivitet",
+    });
+
+    if (!isConfirmed) {
+      return;
+    }
+
     await fetch(`http://localhost:3042/activity/${params}`, {
       method: "DELETE",
       headers: {
