@@ -72,7 +72,7 @@ const BackofficeActivities = () => {
 
 // REVIEWS
 const BackofficeReviews = () => {
-  const { reviews } = useFetchReviews();
+  const { reviews, deleteReview } = useFetchReviews();
 
   return (
     <article>
@@ -85,8 +85,10 @@ const BackofficeReviews = () => {
             <th>Review</th>
             <th>Tid</th>
             <th>Billede</th>
+            <th>---</th>
           </tr>
         </thead>
+
         <tbody>
           {reviews?.map((review) => (
             <tr key={review._id} className="backofficeItem">
@@ -97,6 +99,13 @@ const BackofficeReviews = () => {
               <td>{review.created}</td>
               <td>
                 <img src={review.image}></img>
+              </td>
+              <td>
+                <Button
+                  buttonText="Slet"
+                  background="red"
+                  onClick={() => deleteReview(review._id)}
+                />
               </td>
             </tr>
           ))}
