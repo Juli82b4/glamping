@@ -37,7 +37,6 @@ const activities = () => {
           </div>
         ))}
       </div>
-      <Footer />
     </>
   );
 };

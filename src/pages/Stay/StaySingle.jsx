@@ -42,9 +42,6 @@ function StaySingle() {
         text={stays[0].description}
         showImage={false} // No image displayed in the header
       />
-      
-      {/* Footer section */}
-      <Footer />
     </>
   );
 }

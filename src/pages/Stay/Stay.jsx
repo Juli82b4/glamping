@@ -48,7 +48,6 @@ function Stay() {
           </div>
         ))}
       </div>
-      <Footer /> {/* Render the footer section at the bottom */}
     </>
   );
 }
