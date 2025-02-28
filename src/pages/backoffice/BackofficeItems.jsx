@@ -39,7 +39,7 @@ const BackofficeActivities = () => {
               <td>{activity.date}</td>
               <td>{activity.time}</td>
               <td>
-                <img src={activity.image}></img>
+                <img src={activity.image} style={{ width: "200px", height: "auto" }}></img>
               </td>
               <td className="buttons">
                 <Button
@@ -103,7 +103,7 @@ const BackofficeStays = () => {
                 ))}
               </td>
               <td>
-                <img src={stay.image} alt={stay.title} />
+                <img src={stay.image} alt={stay.title} style={{ width: "100px", height: "auto" }} />
               </td>
               <td>
                 <Button
@@ -148,7 +148,7 @@ const BackofficeReviews = () => {
               <td>{review.review}</td>
               <td>{review.created}</td>
               <td>
-                <img src={review.image}></img>
+                <img src={review.image} style={{ width: "100px", height: "auto" }}></img>
               </td>
               <td>
                 <Button

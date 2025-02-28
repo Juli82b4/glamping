@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./header.module.css";
-
+import gitteImage from "../../assets/images/gitte.jpg"; 
 const Header = ({ header, text, showImage }) => {
   return (
     <div className={styles.container}>
@@ -11,7 +11,7 @@ const Header = ({ header, text, showImage }) => {
         <>
           <img
             className={styles.gittePic}
-            src="src/assets/images/gitte.jpg"
+            src={gitteImage}
             alt="Gitte"
           />
           <button className={styles.headerButton}>SE VORES OPHOLD</button>
