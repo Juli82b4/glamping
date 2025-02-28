@@ -79,10 +79,6 @@ const ActivityForm = ({ isEditMode }) => {
       } else {
         response = await createActivity(activityData);
       }
-      console.log(
-        isEditMode ? "Aktivitet opdateret" : "Ophold oprettet",
-        response
-      );
 
       if (response) {
         await refetch();

@@ -17,7 +17,6 @@ const BackofficeActivities = () => {
     navigate(`/activities/edit/${activityId}`);
   };
 
-  console.log(activities);
   return (
     <article>
       <table>
@@ -73,7 +72,6 @@ const BackofficeActivities = () => {
 // STAYS
 const BackofficeStays = () => {
   const { stays, deleteStay } = useFetchStays();
-  console.log(stays);
 
   return (
     <article>
