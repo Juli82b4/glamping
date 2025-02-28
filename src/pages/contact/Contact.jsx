@@ -120,8 +120,7 @@ const Contact = () => {
         {success && <p>Form submitted successfully!</p>}
       </div>
 
-      {/* Footer component */}
-      <Footer />
+    
     </>
   );
 };
