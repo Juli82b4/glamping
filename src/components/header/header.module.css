@@ -1,0 +1,25 @@
+.container {
+  background-color: #33626c;
+  text-align: center;
+  color: white;
+}
+
+.gittePic {
+  width: 182px;
+  height: 176px;
+  border-radius: 100px;
+  margin-top: 40px;
+}
+
+.headerButton {
+  margin: 2em;
+  font-size: 1rem;
+  padding: 1.5em 3.5em;
+  border-radius: 1em 0;
+  color: #fff;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #829b97;
+  border: none;
+}

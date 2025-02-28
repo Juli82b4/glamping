@@ -1,7 +1,7 @@
 // ACTIVITYFORM
 import { useEffect, useState } from "react";
 import { useNavigate, useOutletContext, useParams } from "react-router-dom";
-import { useFetch } from "../../../components/hooks/useFetch";
+import { useFetch } from "../../../hooks/useFetch";
 import styles from "./form.module.css";
 import Button from "../../../components/button/Button";
 

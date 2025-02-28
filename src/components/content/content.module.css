@@ -1,0 +1,33 @@
+.contentContainer {
+  background-color: #ced3cd;
+  padding: 40px;
+  font-family: "Arial", sans-serif;
+}
+
+.contentHeading {
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  background-color: #c5b496;
+  border-radius: 2em 0;
+  padding: 1em 2em;
+}
+
+.tesimony {
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  background-color: #829b97;
+  border-radius: 2em 0;
+  margin-bottom: 10px;
+}
+
+.tesimonyHeader {
+  font-size: 1.4rem;
+  font-weight: bold;
+  
+}
+
+.tesimonyContent{
+    font-size: 16px;
+}

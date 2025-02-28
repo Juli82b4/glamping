@@ -1,0 +1,76 @@
+.stayList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #99b3af;
+}
+
+.stayItem {
+  background-color: #99b3af;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.stayHeader {
+  padding: 16px;
+  background-color: #c5b496;
+  color: white;
+  text-align: center;
+  border-radius: 2em 0 ;
+}
+
+.stayHeader h1 {
+  font-size: 24px;
+  margin: 0;
+  color: white;
+}
+
+.stayHeader label {
+  font-size: 16px;
+  color: white;
+}
+
+.stayImage img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.stayFooter {
+  background-color:#829B97 ;
+  padding: 30px 2px;
+  text-align: center;
+  color: white;
+  border-radius: 2em 0;
+}
+
+.stayFooter a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  
+}
+
+.stayFooter a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 36px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  font-size: 18px;
+  margin: 5px 0;
+  color: #333;
+}
+

@@ -1,0 +1,31 @@
+.contactForm {
+  text-align: center;
+}
+
+.kontaktContent {
+  background-color: #33626c;
+}
+
+.contactForm label,
+.contactForm input,
+.contactForm textarea {
+  color: white;
+  margin: 8px;
+}
+
+.contactForm textarea,
+input {
+  background-color: #33626c;
+  border-color: white;
+  border-radius: 10px;
+  padding: 5px 20px;
+}
+
+.submitBtn {
+  background-color: #829b97;
+  padding: 2em 6em;
+  border-radius: 2em 0;
+  border: none;
+  margin: 20px;
+  color: white;
+}

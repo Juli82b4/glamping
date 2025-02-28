@@ -1,9 +1,9 @@
 // ACTIVITIES
 import { Outlet, useNavigate } from "react-router-dom";
 import Button from "../../components/button/Button";
-import { useFetch } from "../../components/hooks/useFetch";
-import { useFetchReviews } from "../../components/hooks/useFetchReviews";
-import { useFetchStays } from "../../components/hooks/useFetchStays";
+import { useFetch } from "../../hooks/useFetch";
+import { useFetchReviews } from "../../hooks/useFetchReviews";
+import { useFetchStays } from "../../hooks/useFetchStays";
 
 const BackofficeActivities = () => {
   const { activities, deleteActivity, refetch } = useFetch();

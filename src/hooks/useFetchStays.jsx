@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { useAuthContext } from "../../context/useAuthContext";
+import { useAuthContext } from "../context/useAuthContext";
 import Swal from "sweetalert2";
 
 const useFetchStays = () => {
