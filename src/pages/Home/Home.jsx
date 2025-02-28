@@ -14,7 +14,6 @@ function Home() {
         showImage={true}
       />
       <Content />
-      <Footer />
     </>
   );
 }
