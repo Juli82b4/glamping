@@ -1,3 +1,4 @@
+/* Navigation Styles */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -24,14 +25,16 @@
   transform: scale(1.1);
 }
 
+/* Burger Menu Area */
 .burgerArea {
   background-color: #829b97;
   padding: 1em;
   border-radius: 1em 0;
 }
 
+/* Burger Button (always visible) */
 .burger {
-  display: none;
+  display: flex; /* Show the burger menu icon on all screen sizes */
   flex-direction: column;
   gap: 5px;
   background: none;
@@ -46,6 +49,7 @@
   border-radius: 5px;
 }
 
+/* Fullscreen Menu */
 .fullscreenMenu {
   position: fixed;
   top: 0;
@@ -88,6 +92,7 @@
   color: #f4a261;
 }
 
+/* Close Button */
 .closeButton {
   position: absolute;
   top: 1.5rem;
@@ -99,8 +104,18 @@
   cursor: pointer;
 }
 
+/* Optional: For desktop view, make the burger button still functional */
 @media (max-width: 768px) {
   .burger {
-    display: flex;
+    display: flex; /* Ensure the burger is visible in all screen sizes */
+  }
+
+  /* You can adjust menu animation on mobile */
+  .fullscreenMenu {
+    transform: translateY(-100%);
+  }
+
+  .fullscreenMenu.showMenu {
+    transform: translateY(0);
   }
 }

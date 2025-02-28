@@ -12,7 +12,7 @@ function Navigation() {
     <nav className={styles.navbar}>
       <div className={styles.logo}>
         <a href="/">
-          <img src="src/assets/images/logo.png" />
+          <img src="src/assets/images/logo.png" alt="Logo" />
         </a>
       </div>
 
